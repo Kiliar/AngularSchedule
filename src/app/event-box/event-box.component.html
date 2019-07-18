@@ -1,0 +1,14 @@
+<div [ngStyle]="{'height.px' : 540*minToMinToPxCoeff}" class="events-wrapper">
+  <div class="timeLine">
+    <span *ngFor="let time of timeStamp">{{time}}</span>
+  </div>
+  <div *ngFor="let t of formatted"
+       [ngStyle]="{
+    'width' : 100/t.depth + '%',
+    'height' : t.heightPX + 'px',
+    'top' : t.startPX + 'px',
+    'left' : 100 - 100/t.depthLevel + '%'
+    }"
+       class="event {{t}}"
+  ><p class="event-text">{{t.text}}</p></div>
+</div>

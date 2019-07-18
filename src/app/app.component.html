@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <div class="nav-wrapper">
+    <div class="row">
+      <div class="col s12">
+        <a class="brand-logo" routerLink="/">{{title}}</a>
+        <div class="right hide-on-med-and-down">
+          <span *ngIf="userLogin as name; else noLogin" class="user-name">{{name}}'s schedule</span>
+          <ng-template #noLogin>
+            <a class="login-link" routerLink="/">Login please</a>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container content-wrapper">
+  <router-outlet></router-outlet>
+</div>

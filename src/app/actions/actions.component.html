@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Actions</span>
+        <p>
+          {{jsonString}}
+        </p>
+        <div class="row">
+          <div class="input-field col s12">
+            <input [(ngModel)]="newText" class="validate" id="event-text" type="text">
+            <label for="event-text">Event text</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input [(ngModel)]="newStart" class="validate" id="start-time" type="number">
+            <label for="start-time">Start time</label>
+          </div>
+          <div class="input-field col s6">
+            <input [(ngModel)]="newDuration" class="validate" id="duration" type="number">
+            <label for="duration">Duration</label>
+          </div>
+        </div>
+      </div>
+      <div class="card-action">
+        <a (click)="callParent()">Add event!</a>
+      </div>
+    </div>
+  </div>
+</div>
